@@ -9,6 +9,14 @@ public class Pantry {
     //Private Jam objects that will be used by the methods and constructors
     private Jam a, b, c;
     
+    public Pantry(){
+        
+        a = new Jam("Gooseberry", 12, 4, 7, 86);
+        b = new Jam("Crab Apple", 8, 30, 9, 99);
+        c = new Jam("Rhubarb", 16, 31, 10, 99);
+        
+    }
+    
     //Constructor that creates a pantry object and takes 3 Jam objects as parameters for the jam stored in that pantry
     public Pantry(Jam d, Jam e, Jam f){
         
