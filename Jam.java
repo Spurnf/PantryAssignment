@@ -2,10 +2,23 @@ package pantry;
 
 public class Jam {
     
+    //Instance Variables that store data about the jam 
     private String jamType;
     private int ouncesJam;
     private int cannedDay, cannedMonth, cannedYear;
     
+    //Constructor that creates a jam object and takes no parameters as the default jam is set as Gooseberry 
+    public Jam(){
+        
+        jamType = "Gooseberry";
+        ouncesJam = 12;
+        cannedDay = 4;
+        cannedMonth = 7;
+        cannedYear = 86;
+        
+    }
+    
+    //Constructor that creates a jam object that takes the information as parameters
     public Jam (String name, int amount, int day, int month, int year){
         
         jamType = name;
@@ -16,6 +29,7 @@ public class Jam {
         
     }
     
+    //Method that spreads the jam and changes according to the user input (parameters)
     public void spreadJam(int amount){
         if(this.isEmpty()){
             System.out.println("No jam in the jar!");
@@ -29,10 +43,12 @@ public class Jam {
         }
     }
     
+    //Helper method that returns a boolean value and checks to see if the jar is empty 
     private boolean isEmpty(){
         return this.ouncesJam == 0;
     }
     
+    //Method that prints out the information related to the jam object 
     public String jamInfo(){
         return (this.jamType + "    " + this.cannedMonth + "/" + this.cannedDay + "/" + this.cannedYear + "    " + this.ouncesJam + " fl. oz.");
     }
